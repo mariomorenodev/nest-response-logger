@@ -53,7 +53,7 @@ export class AppModule {}
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+Nest response logger [MIT licensed](LICENSE.md).
 
 ```
 
