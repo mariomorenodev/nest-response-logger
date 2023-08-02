@@ -6,4 +6,4 @@ import { LoggerInterceptor } from './logger.interceptor';
   providers: [NestResponseLoggerService, LoggerInterceptor],
   exports: [NestResponseLoggerService, LoggerInterceptor],
 })
-export class NestResponseLoggerModule {}
+export class NestResponseLoggerModule { }

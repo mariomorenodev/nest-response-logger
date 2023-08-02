@@ -1,15 +1,16 @@
 {
   "name": "@mariomorenodev/nest-response-logger",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Logger global interceptor library for Nest apps",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariomorenodev/nest-response-logger.git"
+  },
   "files": [
     "dist"
   ],
-  "scripts": {
-    "test": "jest"
-  },
   "keywords": [
     "nest",
     "nestjs",
