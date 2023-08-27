@@ -14,10 +14,10 @@ Copy the variables from the `.env.example` file to the `.env` file
 $ cp .env.example .env
 ```
 
-Or add variables to the environment
+Or add variables to the environment 
 
 ```bash
-TZ=America/Buenos_Aires
+TZ=UTC
 
 LOG_FILE_PATH=./logs/app.log
 LOG_FILE_ENABLED=false
