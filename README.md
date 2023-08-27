@@ -8,6 +8,20 @@ Logger global interceptor library for Nest apps
 $ npm install @mariomorenodev/nest-response-logger
 ```
 
+Copy the variables from the `.env.example` file to the `.env` file
+
+```bash
+$ cp .env.example .env
+```
+
+Or add variables to the environment
+
+```bash
+TZ=America/Buenos_Aires
+
+LOG_FILE_PATH=./logs/app.log
+LOG_FILE_ENABLED=false
+```
 ## Usage
 
 Add the NestResponseLogger service globally in the `main.ts` file:

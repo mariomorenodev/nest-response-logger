@@ -19,7 +19,7 @@ describe('LoggerInterceptor', () => {
     jest.clearAllMocks();
   });
 
-  it('Registrar log cuando la respuesta es correcta y enableLog es verdadero', async () => {
+  it('Record log when response is correct and enableLog is true', async () => {
     const value = { enableLog: true };
     const context = createMockContext(HttpStatus.OK);
     const next = createMockNext({ enableLog: true });
@@ -31,7 +31,7 @@ describe('LoggerInterceptor', () => {
     expect(result).toEqual(value);
   });
 
-  it('No Registrar log cuando la respuesta es correcta y enableLog es falso', async () => {
+  it('Don not log when response is correct and enableLog log es false', async () => {
     const value = { enableLog: false };
     const context = createMockContext(HttpStatus.OK);
     const next = createMockNext({ enableLog: false });
@@ -43,7 +43,7 @@ describe('LoggerInterceptor', () => {
     expect(result).toEqual(value);
   });
 
-  it('Registrar log cuando la respuesta es de error', async () => {
+  it('Record log when response is error', async () => {
     const value = new HttpException('Internal server error', HttpStatus.OK);
     const context = createMockContext(HttpStatus.OK);
     const next = createMockNext(
@@ -57,7 +57,6 @@ describe('LoggerInterceptor', () => {
     expect(result).toEqual(value);
   });
 
-  // Funciones de utilidad para crear objetos simulados
   function createMockContext(statusCode: number): ExecutionContext {
     return {
       switchToHttp: () => ({

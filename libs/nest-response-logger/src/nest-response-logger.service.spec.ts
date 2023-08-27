@@ -18,7 +18,7 @@ describe('NestResponseLoggerService', () => {
     jest.clearAllMocks();
   });
 
-  it('Registrar logger console log', () => {
+  it('Log logger console log', () => {
     const message = 'This is a log message';
     const logSpy = jest.spyOn(console, 'log');
 
@@ -31,7 +31,7 @@ describe('NestResponseLoggerService', () => {
     );
   });
 
-  it('Registrar logger console error', () => {
+  it('Log logger console error', () => {
     const message = 'This is a error message';
     const errorSpy = jest.spyOn(console, 'error');
 
@@ -44,7 +44,7 @@ describe('NestResponseLoggerService', () => {
     );
   });
 
-  it('Registrar logger console warn', () => {
+  it('Log logger console warn', () => {
     const message = 'This is a warn message';
     const warnSpy = jest.spyOn(console, 'warn');
 
@@ -57,7 +57,7 @@ describe('NestResponseLoggerService', () => {
     );
   });
 
-  it('Registrar logger console debug', () => {
+  it('Log logger console debug', () => {
     const message = 'This is a debug message';
     const debugSpy = jest.spyOn(console, 'debug');
 

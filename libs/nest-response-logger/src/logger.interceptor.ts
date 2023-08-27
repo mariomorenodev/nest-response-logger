@@ -43,7 +43,7 @@ export class LoggerInterceptor implements NestInterceptor {
       }),
       // Maneja el error capturado en el servicio si ocurre y registrarlo en los logs
       catchError((error) => {
-        const statusCode: number = error.getStatus() ?? 500;
+        const statusCode: number = error.getStatus ? error.getStatus() : 500;
         const message = error.message ?? 'Internal server error';
         const stack = error.stack ?? 'No stack trace';
 
