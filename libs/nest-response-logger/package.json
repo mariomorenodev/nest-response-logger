@@ -1,6 +1,6 @@
 {
   "name": "@mariomorenodev/nest-response-logger",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Logger global interceptor library for Nest apps",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

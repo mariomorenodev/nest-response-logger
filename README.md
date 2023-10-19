@@ -27,8 +27,7 @@ LOG_FILE_ENABLED=false
 Add the NestResponseLogger service globally in the `main.ts` file:
 
 ```typescript
-import { NestFactory } from '@nestjs/core';
-import { NestResponseLoggerService } from '@app/nest-response-logger';
+import { NestResponseLoggerService } from '@mariomorenodev/nest-response-logger';
 
 import { AppModule } from './app.module';
 
@@ -44,16 +43,11 @@ bootstrap();
 Add the interceptor globally in the `app.module.ts` file:
 
 ```typescript
-import { Module } from '@nestjs/common';
-import { APP_INTERCEPTOR } from '@nestjs/core';
-import { LoggerInterceptor } from '@app/nest-response-logger';
-import { NestResponseLoggerModule } from '@app/nest-response-logger';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { LoggerInterceptor } from '@mariomorenodev/nest-response-logger';
+import { NestResponseLoggerModule } from '@mariomorenodev/nest-response-logger';
 
 @Module({
   imports: [NestResponseLoggerModule],
-  controllers: [AppController],
   providers: [
     AppService,
     {
@@ -62,7 +56,6 @@ import { AppService } from './app.service';
     },
   ],
 })
-export class AppModule {}
 ```
 
 ## License
